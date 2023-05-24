@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Jet Restaurants</string>
+    <string name="restaurant_name">Restaurant Name</string>
+    <string name="restaurant_description">Restaurant description</string>
+    <string name="back">Back</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_about">About</string>
+</resources>
