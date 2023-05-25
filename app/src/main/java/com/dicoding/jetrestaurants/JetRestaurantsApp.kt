@@ -124,7 +124,9 @@ fun BottomBar(
                     icon = {
                         Icon(
                             imageVector = item.icon,
-                            contentDescription = item.title
+                            contentDescription =
+                            if (item.title == stringResource(R.string.menu_about)) "about_page"
+                            else "home_page"
                         )
                     },
                     label = { Text(item.title) },

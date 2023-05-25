@@ -2,10 +2,14 @@ package com.dicoding.jetrestaurants.ui.screen.about
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.border
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -30,12 +34,14 @@ fun AboutContent() {
     Column(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(top = 200.dp),
-        horizontalAlignment = Alignment.CenterHorizontally
+            .fillMaxHeight()
+            .verticalScroll(rememberScrollState()),
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center
     ) {
         Image(
             painter = painterResource(R.drawable.me),
-            contentDescription = "about_page",
+            contentDescription = null,
             modifier = Modifier
                 .clip(CircleShape)
                 .border(2.dp, Color.Gray, CircleShape)
